@@ -1,0 +1,15 @@
+<section fxLayout="column" fxLayoutAlign="center center">
+
+  <p>Source</p>
+
+  <textarea [style.width]="'80%'" [value]="readme" (input)="readme = $event.target.value" cdkTextareaAutosize cdkAutosizeMinRows="1">
+  </textarea>
+
+  <br>
+
+  <h1>Readme</h1>
+  <p [wm-readme]="readme" [context]="this">
+    Default <b>content</b> rendered when source is <s>null or empty</s>
+  </p>
+
+</section>
